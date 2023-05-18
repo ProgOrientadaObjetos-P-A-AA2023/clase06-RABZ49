@@ -40,10 +40,10 @@ public class LibretaCalificacion {
     
     public void establecerPromedioCualitativo(){
         if((obtenerPromedio()>=0)&&(obtenerPromedio()<=3.09)){
-            promedioCualitativo = "Regular";
+            promedioCualitativo = "Insuficiente";
         }else{
             if((obtenerPromedio()>=3.1)&&(obtenerPromedio()<=5.09)){
-                promedioCualitativo = "Insuficiente";
+                promedioCualitativo = "Regular";
             }else{
                 if((obtenerPromedio()>=5.1)&&(obtenerPromedio()<=7.09)){
                     promedioCualitativo = "Bueno";
