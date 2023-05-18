@@ -37,9 +37,10 @@ public class Hospital {
         ciudadHospital = "Quito";
         // presupuesto anual será de 250 mil dolares con 10 centavos
         presupuestoAnual = 250000.10;
+        
     }
     
-    // Objetos para opción 3
+    // Objetos para opción 3 
     public Hospital(String nombre, String ciudad, int camas, int doctores, 
             double presupueto){
         nombreHospital = nombre;

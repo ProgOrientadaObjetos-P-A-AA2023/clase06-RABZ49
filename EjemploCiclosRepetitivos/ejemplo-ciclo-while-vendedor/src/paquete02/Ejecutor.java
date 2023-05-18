@@ -5,6 +5,7 @@
  */
 package paquete02;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejecutor {
@@ -18,6 +19,7 @@ public class Ejecutor {
         boolean bandera;
         String opcion;
         Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
         String cadenaFinal;
         // Inicio de proceso iterativo 
         bandera = true;
@@ -37,7 +39,7 @@ public class Ejecutor {
             Vendedor v = new Vendedor(nombre, edad, sMinino, 
                     autos);
             v.calcularPagoMensual();
-            cadenaFinal = String.format("%sDatos de Vendedor\n"
+            cadenaFinal = String.format("%Datos de Vendedor\n"
                     + "Nombre: %s\n"
                     + "Edad: %s\n"
                     + "Salario mínimo: %.2f\n"
