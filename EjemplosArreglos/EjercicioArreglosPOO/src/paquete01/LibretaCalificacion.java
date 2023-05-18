@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package paquete01;
-
+import paquete04.Colegio;
 /**
  *
  * @author reroes
@@ -15,11 +15,20 @@ public class LibretaCalificacion {
     private double promedio;
     private String promedioCualitativo;
     private double[] calificaciones;
-    // private Colegio c;
+    private Colegio colegio;
 
-    public LibretaCalificacion(String n, double[] c) {
+    public Colegio obtenerColegio() {
+        return colegio;
+    }
+
+    public void establecerColegio(Colegio x) {
+        colegio = x;
+    }
+
+    public LibretaCalificacion(String n, double[] c,Colegio co) {
         estudiante = n;
         calificaciones = c;
+        colegio = co;
     }
 
     public void establecerEstudiante(String n) {
@@ -39,10 +48,10 @@ public class LibretaCalificacion {
 
     public void establecerPromedioCualitativo() {
         if ((obtenerPromedio() >= 0) && (obtenerPromedio() <= 3.09)) {
-            promedioCualitativo = "Regular";
+            promedioCualitativo = "Insuficiente";
         } else {
             if ((obtenerPromedio() >= 3.1) && (obtenerPromedio() <= 5.09)) {
-                promedioCualitativo = "Insuficiente";
+                promedioCualitativo = "Regular";
             } else {
                 if ((obtenerPromedio() >= 5.1) && (obtenerPromedio() <= 7.09)) {
                     promedioCualitativo = "Bueno";
@@ -84,7 +93,9 @@ public class LibretaCalificacion {
     @Override
     public String toString() {
         String cadena = "Libreta de Calificaciones\n";
-        cadena = String.format("%sNombre: %s\nCalificaciones:\n", cadena,
+        cadena = String.format("%sColegio: %S\n Ciudad: %S\n Nombre: %S\n"
+                + "Calificaciones:\n", cadena,obtenerColegio().obtenerNombre(),
+                obtenerColegio().obtenerCiudad(),
                 obtenerEstudiante());
         // cadena = String.format("%sNombre: %s\nCalificaciones:\n", cadena,
         //        estudiante);

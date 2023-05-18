@@ -1,0 +1,7 @@
+Datos de Vendedor
+Nombre: Roberto 
+Edad: 18
+Salario mínimo: 500,00
+Número de autos: 600
+Pago mensual: 90500,00
+
